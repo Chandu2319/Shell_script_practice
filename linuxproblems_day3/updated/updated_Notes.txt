@@ -1,0 +1,17 @@
+Linux commands
+ls -> list of contents
+	ls -l -> list with all details
+cd -> to change directory
+pwd -> to show the the present working directory
+mkdir -> to create new folder
+touch -> to create a new file
+cat -> to view contents of a file
+head and tail -> to view only starting/ending rows of the data in the file
+rm -> to remove a file
+	rm -r -> to remove a folder
+git clone- read pdf of first class
+env	- to show all the environment variables(printenv also has the same purpose)
+set	- to show all the variables which have been set a value
+export dry	- to make a variable(dry) defined into environment variable.
+export -n dry	- to make an environment variable(dry) into normal variable(still 		  appears in set)
+unset dry	- to remove the variable completely.

@@ -1,0 +1,11 @@
+Linux commands
+ls -> list of contents
+	ls -l -> list with all details
+cd -> to change directory
+pwd -> to show the the present working directory
+mkdir -> to create new folder
+touch -> to create a new file
+cat -> to view contents of a file
+head and tail -> to view only starting/ending rows of the data in the file
+rm -> to remove a file
+rm -r -> to remove a folder
