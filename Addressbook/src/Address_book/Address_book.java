@@ -1,0 +1,59 @@
+package Address_book;
+
+import java.io.*;
+import java.util.*;
+import jxl.read.biff.BiffException;
+
+/**
+ * @author Chandra Sekhar
+ * The Address_book class created here is to add, edit and store a list of addresses in a book
+ */
+
+public class Address_book {
+	private	Vector<Contact> contact = new Vector<Contact>();
+	public Address_book() {
+		
+	}
+	
+	public Contact get_contact(int i) {
+		return contact.elementAt(i);
+	}
+	public void set_Contact(Contact contact,int i) {
+		this.contact.add(i, contact);
+	}
+
+
+	public void add_contact(String first_name,	String last_name,	String address,	String city,	String state,
+			String zip_code,	String mobile_no,	String email_id ) throws BiffException { 
+			Contact c1 = new Contact(first_name,last_name,address,city,state,zip_code,mobile_no,email_id);
+			contact.add(c1);//contact.elementAt(1).;
+		
+	}
+
+	public int find_contact(String name) {
+		// This function finds the contact in the list given name of the contact
+		Contact c1 = new Contact();
+		for(int i = 0; i<contact.size(); i++ ){
+			if(contact.elementAt(i).first_name == name || contact.elementAt(i).last_name == name){
+				c1 = contact.elementAt(i);
+			}
+			else {
+				c1 = contact.lastElement();
+			}
+		}
+		return contact.indexOf(c1);
+	}
+
+	public void edit_contact(String name,Contact c) {
+		// Changes contents of the given contact
+		int index = find_contact(name);
+		contact.remove(index);
+		contact.add(index, c);
+	}
+	
+	public void delete_contact(String name) {
+		// This function deletes the contact
+		int index = find_contact(name);
+		contact.remove(index);
+	}
+}
